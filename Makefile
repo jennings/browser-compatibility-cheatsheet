@@ -5,7 +5,7 @@ all: execute
 FORCE:
 
 setup: v/.Python
-venv/.Python:
+v/.Python:
 	virtualenv v
 
 execute: FORCE
