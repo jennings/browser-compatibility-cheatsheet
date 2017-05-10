@@ -1,12 +1,15 @@
-.PHONY: all setup FORCE
+.PHONY: all setup execute clean FORCE
 
-all: scrape
+all: execute
 
 FORCE:
 
-setup: venv/.Python
+setup: v/.Python
 venv/.Python:
-	virtualenv venv
+	virtualenv v
 
-scrape: FORCE
-	python3 -m scraper
+execute: FORCE
+	python -m scraper
+
+clean: FORCE
+	rm -f data.sqlite3 global_objects.html

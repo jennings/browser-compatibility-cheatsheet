@@ -1,3 +1,7 @@
 __pycache__
 *.pyc
-venv/
+v/
+
+# data
+data.sqlite3
+global_objects.html
